@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>quick emoji</title>
+    <script type="module" src="/main.js" defer></script>
+  </head>
+
+  <body>
+    <main class="app">
+      <header class="topbar">
+        <div class="title">
+          <span class="dot"></span>
+          quick emoji
+        </div>
+        <button id="pin-toggle" class="pin" aria-pressed="true">
+          <span class="pin-icon" aria-hidden="true">📌</span>
+          <span class="pin-text">Always on top</span>
+        </button>
+      </header>
+
+      <section class="searchbar">
+        <input
+          id="search-input"
+          type="text"
+          placeholder="Search: 웃음 / smile / fire"
+          autocomplete="off"
+          spellcheck="false"
+        />
+        <button id="clear-search" class="ghost" aria-label="Clear search">
+          ×
+        </button>
+      </section>
+
+      <nav class="tabs" role="tablist" aria-label="Filter tabs">
+        <button class="tab active" data-tab="all" role="tab" aria-selected="true">
+          All
+        </button>
+        <button class="tab" data-tab="recent" role="tab" aria-selected="false">
+          Recent
+        </button>
+        <button class="tab" data-tab="favorites" role="tab" aria-selected="false">
+          Favorites
+        </button>
+      </nav>
+
+      <section id="emoji-grid" class="grid" aria-live="polite"></section>
+
+      <footer class="footer">
+        <span id="status">Click to copy</span>
+        <button id="support-btn" class="support-btn" type="button">
+          ☕ Buy me a coffee
+        </button>
+      </footer>
+    </main>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>

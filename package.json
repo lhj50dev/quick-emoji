@@ -1,0 +1,13 @@
+{
+  "name": "quick-emoji",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "tauri": "tauri",
+    "fetch:emoji": "node scripts/fetch-emoji-data.js"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2"
+  }
+}
